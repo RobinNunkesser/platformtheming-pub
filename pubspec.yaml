@@ -1,7 +1,6 @@
 name: platform_theming
 description: Basic platform specific theming
-version: 0.0.4
-author: Robin Nunkesser
+version: 0.0.1
 homepage: https://github.com/RobinNunkesser/platformtheming-pub
 
 environment:
