@@ -10,213 +10,213 @@ double platformAppBarElevation = Platform.isAndroid ? 4.0 : 0.5;
 
 class PlatformTheme implements ThemeData {
 
-  ThemeData _theme;
+  ThemeData _themeData;
 
   PlatformTheme({ThemeData androidTheme, ThemeData iosTheme}) {
-    _theme =
+    _themeData =
     Platform.isAndroid ? androidTheme ?? ThemeData() : Platform.isIOS ? iosTheme ?? iOSMaterialTheme : null;
   }
 
   @override
-  Color get accentColor => _theme.accentColor;
+  Color get accentColor => _themeData.accentColor;
 
   @override
-  Brightness get accentColorBrightness => _theme.accentColorBrightness;
+  Brightness get accentColorBrightness => _themeData.accentColorBrightness;
 
   @override
-  IconThemeData get accentIconTheme => _theme.accentIconTheme;
+  IconThemeData get accentIconTheme => _themeData.accentIconTheme;
 
   @override
-  TextTheme get accentTextTheme => _theme.accentTextTheme;
+  TextTheme get accentTextTheme => _themeData.accentTextTheme;
 
   @override
-  AppBarTheme get appBarTheme => _theme.appBarTheme;
+  AppBarTheme get appBarTheme => _themeData.appBarTheme;
 
   @override
-  bool get applyElevationOverlayColor => _theme.applyElevationOverlayColor;
+  bool get applyElevationOverlayColor => _themeData.applyElevationOverlayColor;
 
   @override
-  Color get backgroundColor => _theme.backgroundColor;
+  Color get backgroundColor => _themeData.backgroundColor;
 
   @override
-  MaterialBannerThemeData get bannerTheme => _theme.bannerTheme;
+  MaterialBannerThemeData get bannerTheme => _themeData.bannerTheme;
 
   @override
-  Color get bottomAppBarColor => _theme.bottomAppBarColor;
+  Color get bottomAppBarColor => _themeData.bottomAppBarColor;
 
   @override
-  BottomAppBarTheme get bottomAppBarTheme => _theme.bottomAppBarTheme;
+  BottomAppBarTheme get bottomAppBarTheme => _themeData.bottomAppBarTheme;
 
   @override
-  BottomNavigationBarThemeData get bottomNavigationBarTheme => _theme.bottomNavigationBarTheme;
+  BottomNavigationBarThemeData get bottomNavigationBarTheme => _themeData.bottomNavigationBarTheme;
 
   @override
-  BottomSheetThemeData get bottomSheetTheme => _theme.bottomSheetTheme;
+  BottomSheetThemeData get bottomSheetTheme => _themeData.bottomSheetTheme;
 
   @override
-  Brightness get brightness => _theme.brightness;
+  Brightness get brightness => _themeData.brightness;
 
   @override
-  ButtonBarThemeData get buttonBarTheme => _theme.buttonBarTheme;
+  ButtonBarThemeData get buttonBarTheme => _themeData.buttonBarTheme;
 
   @override
-  Color get buttonColor => _theme.buttonColor;
+  Color get buttonColor => _themeData.buttonColor;
 
   @override
-  ButtonThemeData get buttonTheme => _theme.buttonTheme;
+  ButtonThemeData get buttonTheme => _themeData.buttonTheme;
 
   @override
-  Color get canvasColor => _theme.canvasColor;
+  Color get canvasColor => _themeData.canvasColor;
 
   @override
-  Color get cardColor => _theme.cardColor;
+  Color get cardColor => _themeData.cardColor;
 
   @override
-  CardTheme get cardTheme => _theme.cardTheme;
+  CardTheme get cardTheme => _themeData.cardTheme;
 
   @override
-  ChipThemeData get chipTheme => _theme.chipTheme;
+  ChipThemeData get chipTheme => _themeData.chipTheme;
 
   @override
-  ColorScheme get colorScheme => _theme.colorScheme;
+  ColorScheme get colorScheme => _themeData.colorScheme;
 
   @override
-  CupertinoThemeData get cupertinoOverrideTheme => _theme.cupertinoOverrideTheme;
+  CupertinoThemeData get cupertinoOverrideTheme => _themeData.cupertinoOverrideTheme;
 
   @override
-  Color get cursorColor => _theme.cursorColor;
+  Color get cursorColor => _themeData.cursorColor;
 
   @override
-  Color get dialogBackgroundColor => _theme.dialogBackgroundColor;
+  Color get dialogBackgroundColor => _themeData.dialogBackgroundColor;
 
   @override
-  DialogTheme get dialogTheme => _theme.dialogTheme;
+  DialogTheme get dialogTheme => _themeData.dialogTheme;
 
   @override
-  Color get disabledColor => _theme.disabledColor;
+  Color get disabledColor => _themeData.disabledColor;
 
   @override
-  Color get dividerColor => _theme.dividerColor;
+  Color get dividerColor => _themeData.dividerColor;
 
   @override
-  DividerThemeData get dividerTheme => _theme.dividerTheme;
+  DividerThemeData get dividerTheme => _themeData.dividerTheme;
 
   @override
-  Color get errorColor => _theme.errorColor;
+  Color get errorColor => _themeData.errorColor;
 
   @override
-  bool get fixTextFieldOutlineLabel => _theme.fixTextFieldOutlineLabel;
+  bool get fixTextFieldOutlineLabel => _themeData.fixTextFieldOutlineLabel;
 
   @override
-  FloatingActionButtonThemeData get floatingActionButtonTheme => _theme.floatingActionButtonTheme;
+  FloatingActionButtonThemeData get floatingActionButtonTheme => _themeData.floatingActionButtonTheme;
 
   @override
-  Color get focusColor => _theme.focusColor;
+  Color get focusColor => _themeData.focusColor;
 
   @override
-  Color get highlightColor => _theme.highlightColor;
+  Color get highlightColor => _themeData.highlightColor;
 
   @override
-  Color get hintColor => _theme.hintColor;
+  Color get hintColor => _themeData.hintColor;
 
   @override
-  Color get hoverColor => _theme.hoverColor;
+  Color get hoverColor => _themeData.hoverColor;
 
   @override
-  IconThemeData get iconTheme => _theme.iconTheme;
+  IconThemeData get iconTheme => _themeData.iconTheme;
 
   @override
-  Color get indicatorColor => _theme.indicatorColor;
+  Color get indicatorColor => _themeData.indicatorColor;
 
   @override
-  InputDecorationTheme get inputDecorationTheme => _theme.inputDecorationTheme;
+  InputDecorationTheme get inputDecorationTheme => _themeData.inputDecorationTheme;
 
   @override
-  MaterialTapTargetSize get materialTapTargetSize => _theme.materialTapTargetSize;
+  MaterialTapTargetSize get materialTapTargetSize => _themeData.materialTapTargetSize;
 
   @override
-  NavigationRailThemeData get navigationRailTheme => _theme.navigationRailTheme;
+  NavigationRailThemeData get navigationRailTheme => _themeData.navigationRailTheme;
 
   @override
-  PageTransitionsTheme get pageTransitionsTheme => _theme.pageTransitionsTheme;
+  PageTransitionsTheme get pageTransitionsTheme => _themeData.pageTransitionsTheme;
 
   @override
-  TargetPlatform get platform => _theme.platform;
+  TargetPlatform get platform => _themeData.platform;
 
   @override
-  PopupMenuThemeData get popupMenuTheme => _theme.popupMenuTheme;
+  PopupMenuThemeData get popupMenuTheme => _themeData.popupMenuTheme;
 
   @override
-  Color get primaryColor => _theme.primaryColor;
+  Color get primaryColor => _themeData.primaryColor;
 
   @override
-  Brightness get primaryColorBrightness => _theme.primaryColorBrightness;
+  Brightness get primaryColorBrightness => _themeData.primaryColorBrightness;
 
   @override
-  Color get primaryColorDark => _theme.primaryColorDark;
+  Color get primaryColorDark => _themeData.primaryColorDark;
 
   @override
-  Color get primaryColorLight => _theme.primaryColorLight;
+  Color get primaryColorLight => _themeData.primaryColorLight;
 
   @override
-  IconThemeData get primaryIconTheme => _theme.primaryIconTheme;
+  IconThemeData get primaryIconTheme => _themeData.primaryIconTheme;
 
   @override
-  TextTheme get primaryTextTheme => _theme.primaryTextTheme;
+  TextTheme get primaryTextTheme => _themeData.primaryTextTheme;
 
   @override
-  Color get scaffoldBackgroundColor => _theme.scaffoldBackgroundColor;
+  Color get scaffoldBackgroundColor => _themeData.scaffoldBackgroundColor;
 
   @override
-  Color get secondaryHeaderColor => _theme.secondaryHeaderColor;
+  Color get secondaryHeaderColor => _themeData.secondaryHeaderColor;
 
   @override
-  Color get selectedRowColor => _theme.selectedRowColor;
+  Color get selectedRowColor => _themeData.selectedRowColor;
 
   @override
-  SliderThemeData get sliderTheme => _theme.sliderTheme;
+  SliderThemeData get sliderTheme => _themeData.sliderTheme;
 
   @override
-  SnackBarThemeData get snackBarTheme => _theme.snackBarTheme;
+  SnackBarThemeData get snackBarTheme => _themeData.snackBarTheme;
 
   @override
-  Color get splashColor => _theme.splashColor;
+  Color get splashColor => _themeData.splashColor;
 
   @override
-  InteractiveInkFeatureFactory get splashFactory => _theme.splashFactory;
+  InteractiveInkFeatureFactory get splashFactory => _themeData.splashFactory;
 
   @override
-  TabBarTheme get tabBarTheme => _theme.tabBarTheme;
+  TabBarTheme get tabBarTheme => _themeData.tabBarTheme;
 
   @override
-  Color get textSelectionColor => _theme.textSelectionColor;
+  Color get textSelectionColor => _themeData.textSelectionColor;
 
   @override
-  Color get textSelectionHandleColor => _theme.textSelectionHandleColor;
+  Color get textSelectionHandleColor => _themeData.textSelectionHandleColor;
 
   @override
-  TextTheme get textTheme => _theme.textTheme;
+  TextTheme get textTheme => _themeData.textTheme;
 
   @override
-  TimePickerThemeData get timePickerTheme => _theme.timePickerTheme;
+  TimePickerThemeData get timePickerTheme => _themeData.timePickerTheme;
 
   @override
-  ToggleButtonsThemeData get toggleButtonsTheme => _theme.toggleButtonsTheme;
+  ToggleButtonsThemeData get toggleButtonsTheme => _themeData.toggleButtonsTheme;
 
   @override
-  Color get toggleableActiveColor => _theme.toggleableActiveColor;
+  Color get toggleableActiveColor => _themeData.toggleableActiveColor;
 
   @override
-  TooltipThemeData get tooltipTheme => _theme.tooltipTheme;
+  TooltipThemeData get tooltipTheme => _themeData.tooltipTheme;
 
   @override
-  Typography get typography => _theme.typography;
+  Typography get typography => _themeData.typography;
 
   @override
-  Color get unselectedWidgetColor => _theme.unselectedWidgetColor;
+  Color get unselectedWidgetColor => _themeData.unselectedWidgetColor;
 
   @override
-  VisualDensity get visualDensity => _theme.visualDensity;
+  VisualDensity get visualDensity => _themeData.visualDensity;
 
   @override
   ThemeData copyWith({Brightness brightness, VisualDensity visualDensity, Color primaryColor, Brightness primaryColorBrightness, Color primaryColorLight, Color primaryColorDark, Color accentColor, Brightness accentColorBrightness, Color canvasColor, Color scaffoldBackgroundColor, Color bottomAppBarColor, Color cardColor, Color dividerColor, Color focusColor, Color hoverColor, Color highlightColor, Color splashColor, InteractiveInkFeatureFactory splashFactory, Color selectedRowColor, Color unselectedWidgetColor, Color disabledColor, ButtonThemeData buttonTheme, ToggleButtonsThemeData toggleButtonsTheme, Color buttonColor, Color secondaryHeaderColor, Color textSelectionColor, Color cursorColor, Color textSelectionHandleColor, Color backgroundColor, Color dialogBackgroundColor, Color indicatorColor, Color hintColor, Color errorColor, Color toggleableActiveColor, TextTheme textTheme, TextTheme primaryTextTheme, TextTheme accentTextTheme, InputDecorationTheme inputDecorationTheme, IconThemeData iconTheme, IconThemeData primaryIconTheme, IconThemeData accentIconTheme, SliderThemeData sliderTheme, TabBarTheme tabBarTheme, TooltipThemeData tooltipTheme, CardTheme cardTheme, ChipThemeData chipTheme, TargetPlatform platform, MaterialTapTargetSize materialTapTargetSize, bool applyElevationOverlayColor, PageTransitionsTheme pageTransitionsTheme, AppBarTheme appBarTheme, BottomAppBarTheme bottomAppBarTheme, ColorScheme colorScheme, DialogTheme dialogTheme, FloatingActionButtonThemeData floatingActionButtonTheme, NavigationRailThemeData navigationRailTheme, Typography typography, CupertinoThemeData cupertinoOverrideTheme, SnackBarThemeData snackBarTheme, BottomSheetThemeData bottomSheetTheme, PopupMenuThemeData popupMenuTheme, MaterialBannerThemeData bannerTheme, DividerThemeData dividerTheme, ButtonBarThemeData buttonBarTheme, BottomNavigationBarThemeData bottomNavigationBarTheme, TimePickerThemeData timePickerTheme, bool fixTextFieldOutlineLabel}) {
@@ -292,13 +292,13 @@ class PlatformTheme implements ThemeData {
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) => _theme.debugFillProperties(properties);
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) => _themeData.debugFillProperties(properties);
 
   @override
-  DiagnosticsNode toDiagnosticsNode({String name, DiagnosticsTreeStyle style}) => _theme.toDiagnosticsNode(name: name,style: style);
+  DiagnosticsNode toDiagnosticsNode({String name, DiagnosticsTreeStyle style}) => _themeData.toDiagnosticsNode(name: name,style: style);
 
   @override
-  String toStringShort() => _theme.toStringShort();
+  String toStringShort() => _themeData.toStringShort();
 
 
 }
