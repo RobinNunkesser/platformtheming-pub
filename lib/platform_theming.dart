@@ -4,13 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
 
-class PlatformTheme extends ThemeData {
+class PlatformTheme implements ThemeData {
 
   ThemeData _theme;
 
+  //PlatformTheme(this._theme);
+
   PlatformTheme() {
-    _theme = ThemeData();
-  };
+    _theme =
+    Platform.isAndroid ? ThemeData() : Platform.isIOS ? _iOSDefaultMaterialTheme : null;
+  }
 
   @override
   Color get accentColor => _theme.accentColor;
@@ -112,160 +115,194 @@ class PlatformTheme extends ThemeData {
   Color get highlightColor => _theme.highlightColor;
 
   @override
-  // TODO: implement hintColor
-  Color get hintColor => throw UnimplementedError();
+  Color get hintColor => _theme.hintColor;
 
   @override
-  // TODO: implement hoverColor
-  Color get hoverColor => throw UnimplementedError();
+  Color get hoverColor => _theme.hoverColor;
 
   @override
-  // TODO: implement iconTheme
-  IconThemeData get iconTheme => throw UnimplementedError();
+  IconThemeData get iconTheme => _theme.iconTheme;
 
   @override
-  // TODO: implement indicatorColor
-  Color get indicatorColor => throw UnimplementedError();
+  Color get indicatorColor => _theme.indicatorColor;
 
   @override
-  // TODO: implement inputDecorationTheme
-  InputDecorationTheme get inputDecorationTheme => throw UnimplementedError();
+  InputDecorationTheme get inputDecorationTheme => _theme.inputDecorationTheme;
 
   @override
-  // TODO: implement materialTapTargetSize
-  MaterialTapTargetSize get materialTapTargetSize => throw UnimplementedError();
+  MaterialTapTargetSize get materialTapTargetSize => _theme.materialTapTargetSize;
 
   @override
-  // TODO: implement navigationRailTheme
-  NavigationRailThemeData get navigationRailTheme => throw UnimplementedError();
+  NavigationRailThemeData get navigationRailTheme => _theme.navigationRailTheme;
 
   @override
-  // TODO: implement pageTransitionsTheme
-  PageTransitionsTheme get pageTransitionsTheme => throw UnimplementedError();
+  PageTransitionsTheme get pageTransitionsTheme => _theme.pageTransitionsTheme;
 
   @override
-  // TODO: implement platform
-  TargetPlatform get platform => throw UnimplementedError();
+  TargetPlatform get platform => _theme.platform;
 
   @override
-  // TODO: implement popupMenuTheme
-  PopupMenuThemeData get popupMenuTheme => throw UnimplementedError();
+  PopupMenuThemeData get popupMenuTheme => _theme.popupMenuTheme;
 
   @override
-  // TODO: implement primaryColor
-  Color get primaryColor => throw UnimplementedError();
+  Color get primaryColor => _theme.primaryColor;
 
   @override
-  // TODO: implement primaryColorBrightness
-  Brightness get primaryColorBrightness => throw UnimplementedError();
+  Brightness get primaryColorBrightness => _theme.primaryColorBrightness;
 
   @override
-  // TODO: implement primaryColorDark
-  Color get primaryColorDark => throw UnimplementedError();
+  Color get primaryColorDark => _theme.primaryColorDark;
 
   @override
-  // TODO: implement primaryColorLight
-  Color get primaryColorLight => throw UnimplementedError();
+  Color get primaryColorLight => _theme.primaryColorLight;
 
   @override
-  // TODO: implement primaryIconTheme
-  IconThemeData get primaryIconTheme => throw UnimplementedError();
+  IconThemeData get primaryIconTheme => _theme.primaryIconTheme;
 
   @override
-  // TODO: implement primaryTextTheme
-  TextTheme get primaryTextTheme => throw UnimplementedError();
+  TextTheme get primaryTextTheme => _theme.primaryTextTheme;
 
   @override
-  // TODO: implement scaffoldBackgroundColor
-  Color get scaffoldBackgroundColor => throw UnimplementedError();
+  Color get scaffoldBackgroundColor => _theme.scaffoldBackgroundColor;
 
   @override
-  // TODO: implement secondaryHeaderColor
-  Color get secondaryHeaderColor => throw UnimplementedError();
+  Color get secondaryHeaderColor => _theme.secondaryHeaderColor;
 
   @override
-  // TODO: implement selectedRowColor
-  Color get selectedRowColor => throw UnimplementedError();
+  Color get selectedRowColor => _theme.selectedRowColor;
 
   @override
-  // TODO: implement sliderTheme
-  SliderThemeData get sliderTheme => throw UnimplementedError();
+  SliderThemeData get sliderTheme => _theme.sliderTheme;
 
   @override
-  // TODO: implement snackBarTheme
-  SnackBarThemeData get snackBarTheme => throw UnimplementedError();
+  SnackBarThemeData get snackBarTheme => _theme.snackBarTheme;
 
   @override
-  // TODO: implement splashColor
-  Color get splashColor => throw UnimplementedError();
+  Color get splashColor => _theme.splashColor;
 
   @override
-  // TODO: implement splashFactory
-  InteractiveInkFeatureFactory get splashFactory => throw UnimplementedError();
+  InteractiveInkFeatureFactory get splashFactory => _theme.splashFactory;
 
   @override
-  // TODO: implement tabBarTheme
-  TabBarTheme get tabBarTheme => throw UnimplementedError();
+  TabBarTheme get tabBarTheme => _theme.tabBarTheme;
 
   @override
-  // TODO: implement textSelectionColor
-  Color get textSelectionColor => throw UnimplementedError();
+  Color get textSelectionColor => _theme.textSelectionColor;
 
   @override
-  // TODO: implement textSelectionHandleColor
-  Color get textSelectionHandleColor => throw UnimplementedError();
+  Color get textSelectionHandleColor => _theme.textSelectionHandleColor;
 
   @override
-  // TODO: implement textTheme
-  TextTheme get textTheme => throw UnimplementedError();
+  TextTheme get textTheme => _theme.textTheme;
 
   @override
-  // TODO: implement timePickerTheme
-  TimePickerThemeData get timePickerTheme => throw UnimplementedError();
+  TimePickerThemeData get timePickerTheme => _theme.timePickerTheme;
 
   @override
-  DiagnosticsNode toDiagnosticsNode({String name, DiagnosticsTreeStyle style}) {
-    // TODO: implement toDiagnosticsNode
-    throw UnimplementedError();
+  ToggleButtonsThemeData get toggleButtonsTheme => _theme.toggleButtonsTheme;
+
+  @override
+  Color get toggleableActiveColor => _theme.toggleableActiveColor;
+
+  @override
+  TooltipThemeData get tooltipTheme => _theme.tooltipTheme;
+
+  @override
+  Typography get typography => _theme.typography;
+
+  @override
+  Color get unselectedWidgetColor => _theme.unselectedWidgetColor;
+
+  @override
+  VisualDensity get visualDensity => _theme.visualDensity;
+
+  @override
+  ThemeData copyWith({Brightness brightness, VisualDensity visualDensity, Color primaryColor, Brightness primaryColorBrightness, Color primaryColorLight, Color primaryColorDark, Color accentColor, Brightness accentColorBrightness, Color canvasColor, Color scaffoldBackgroundColor, Color bottomAppBarColor, Color cardColor, Color dividerColor, Color focusColor, Color hoverColor, Color highlightColor, Color splashColor, InteractiveInkFeatureFactory splashFactory, Color selectedRowColor, Color unselectedWidgetColor, Color disabledColor, ButtonThemeData buttonTheme, ToggleButtonsThemeData toggleButtonsTheme, Color buttonColor, Color secondaryHeaderColor, Color textSelectionColor, Color cursorColor, Color textSelectionHandleColor, Color backgroundColor, Color dialogBackgroundColor, Color indicatorColor, Color hintColor, Color errorColor, Color toggleableActiveColor, TextTheme textTheme, TextTheme primaryTextTheme, TextTheme accentTextTheme, InputDecorationTheme inputDecorationTheme, IconThemeData iconTheme, IconThemeData primaryIconTheme, IconThemeData accentIconTheme, SliderThemeData sliderTheme, TabBarTheme tabBarTheme, TooltipThemeData tooltipTheme, CardTheme cardTheme, ChipThemeData chipTheme, TargetPlatform platform, MaterialTapTargetSize materialTapTargetSize, bool applyElevationOverlayColor, PageTransitionsTheme pageTransitionsTheme, AppBarTheme appBarTheme, BottomAppBarTheme bottomAppBarTheme, ColorScheme colorScheme, DialogTheme dialogTheme, FloatingActionButtonThemeData floatingActionButtonTheme, NavigationRailThemeData navigationRailTheme, Typography typography, CupertinoThemeData cupertinoOverrideTheme, SnackBarThemeData snackBarTheme, BottomSheetThemeData bottomSheetTheme, PopupMenuThemeData popupMenuTheme, MaterialBannerThemeData bannerTheme, DividerThemeData dividerTheme, ButtonBarThemeData buttonBarTheme, BottomNavigationBarThemeData bottomNavigationBarTheme, TimePickerThemeData timePickerTheme, bool fixTextFieldOutlineLabel}) {
+    cupertinoOverrideTheme = cupertinoOverrideTheme?.noDefault();
+    return ThemeData.raw(
+      visualDensity: visualDensity ?? this.visualDensity,
+      primaryColor: primaryColor ?? this.primaryColor,
+      primaryColorBrightness: primaryColorBrightness ?? this.primaryColorBrightness,
+      primaryColorLight: primaryColorLight ?? this.primaryColorLight,
+      primaryColorDark: primaryColorDark ?? this.primaryColorDark,
+      accentColor: accentColor ?? this.accentColor,
+      accentColorBrightness: accentColorBrightness ?? this.accentColorBrightness,
+      canvasColor: canvasColor ?? this.canvasColor,
+      scaffoldBackgroundColor: scaffoldBackgroundColor ?? this.scaffoldBackgroundColor,
+      bottomAppBarColor: bottomAppBarColor ?? this.bottomAppBarColor,
+      cardColor: cardColor ?? this.cardColor,
+      dividerColor: dividerColor ?? this.dividerColor,
+      focusColor: focusColor ?? this.focusColor,
+      hoverColor: hoverColor ?? this.hoverColor,
+      highlightColor: highlightColor ?? this.highlightColor,
+      splashColor: splashColor ?? this.splashColor,
+      splashFactory: splashFactory ?? this.splashFactory,
+      selectedRowColor: selectedRowColor ?? this.selectedRowColor,
+      unselectedWidgetColor: unselectedWidgetColor ?? this.unselectedWidgetColor,
+      disabledColor: disabledColor ?? this.disabledColor,
+      buttonColor: buttonColor ?? this.buttonColor,
+      buttonTheme: buttonTheme ?? this.buttonTheme,
+      toggleButtonsTheme: toggleButtonsTheme ?? this.toggleButtonsTheme,
+      secondaryHeaderColor: secondaryHeaderColor ?? this.secondaryHeaderColor,
+      textSelectionColor: textSelectionColor ?? this.textSelectionColor,
+      cursorColor: cursorColor ?? this.cursorColor,
+      textSelectionHandleColor: textSelectionHandleColor ?? this.textSelectionHandleColor,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      dialogBackgroundColor: dialogBackgroundColor ?? this.dialogBackgroundColor,
+      indicatorColor: indicatorColor ?? this.indicatorColor,
+      hintColor: hintColor ?? this.hintColor,
+      errorColor: errorColor ?? this.errorColor,
+      toggleableActiveColor: toggleableActiveColor ?? this.toggleableActiveColor,
+      textTheme: textTheme ?? this.textTheme,
+      primaryTextTheme: primaryTextTheme ?? this.primaryTextTheme,
+      accentTextTheme: accentTextTheme ?? this.accentTextTheme,
+      inputDecorationTheme: inputDecorationTheme ?? this.inputDecorationTheme,
+      iconTheme: iconTheme ?? this.iconTheme,
+      primaryIconTheme: primaryIconTheme ?? this.primaryIconTheme,
+      accentIconTheme: accentIconTheme ?? this.accentIconTheme,
+      sliderTheme: sliderTheme ?? this.sliderTheme,
+      tabBarTheme: tabBarTheme ?? this.tabBarTheme,
+      tooltipTheme: tooltipTheme ?? this.tooltipTheme,
+      cardTheme: cardTheme ?? this.cardTheme,
+      chipTheme: chipTheme ?? this.chipTheme,
+      platform: platform ?? this.platform,
+      materialTapTargetSize: materialTapTargetSize ?? this.materialTapTargetSize,
+      applyElevationOverlayColor: applyElevationOverlayColor ?? this.applyElevationOverlayColor,
+      pageTransitionsTheme: pageTransitionsTheme ?? this.pageTransitionsTheme,
+      appBarTheme: appBarTheme ?? this.appBarTheme,
+      bottomAppBarTheme: bottomAppBarTheme ?? this.bottomAppBarTheme,
+      colorScheme: (colorScheme ?? this.colorScheme).copyWith(brightness: brightness),
+      dialogTheme: dialogTheme ?? this.dialogTheme,
+      floatingActionButtonTheme: floatingActionButtonTheme ?? this.floatingActionButtonTheme,
+      navigationRailTheme: navigationRailTheme ?? this.navigationRailTheme,
+      typography: typography ?? this.typography,
+      cupertinoOverrideTheme: cupertinoOverrideTheme ?? this.cupertinoOverrideTheme,
+      snackBarTheme: snackBarTheme ?? this.snackBarTheme,
+      bottomSheetTheme: bottomSheetTheme ?? this.bottomSheetTheme,
+      popupMenuTheme: popupMenuTheme ?? this.popupMenuTheme,
+      bannerTheme: bannerTheme ?? this.bannerTheme,
+      dividerTheme: dividerTheme ?? this.dividerTheme,
+      buttonBarTheme: buttonBarTheme ?? this.buttonBarTheme,
+      bottomNavigationBarTheme: bottomNavigationBarTheme ?? this.bottomNavigationBarTheme,
+      timePickerTheme: timePickerTheme ?? this.timePickerTheme,
+      fixTextFieldOutlineLabel: fixTextFieldOutlineLabel ?? this.fixTextFieldOutlineLabel,
+    );
   }
 
   @override
-  String toStringShort() {
-    // TODO: implement toStringShort
-    throw UnimplementedError();
-  }
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) => _theme.debugFillProperties(properties);
 
   @override
-  // TODO: implement toggleButtonsTheme
-  ToggleButtonsThemeData get toggleButtonsTheme => throw UnimplementedError();
+  DiagnosticsNode toDiagnosticsNode({String name, DiagnosticsTreeStyle style}) => _theme.toDiagnosticsNode(name: name,style: style);
 
   @override
-  // TODO: implement toggleableActiveColor
-  Color get toggleableActiveColor => throw UnimplementedError();
+  String toStringShort() => _theme.toStringShort();
 
-  @override
-  // TODO: implement tooltipTheme
-  TooltipThemeData get tooltipTheme => throw UnimplementedError();
-
-  @override
-  // TODO: implement typography
-  Typography get typography => throw UnimplementedError();
-
-  @override
-  // TODO: implement unselectedWidgetColor
-  Color get unselectedWidgetColor => throw UnimplementedError();
-
-  @override
-  // TODO: implement visualDensity
-  VisualDensity get visualDensity => throw UnimplementedError();
 
 }
 
-
-
-ThemeData _androidTheme = ThemeData();
 CupertinoThemeData _iOSDefaultTheme = CupertinoThemeData();
-ThemeData _iOSTheme = ThemeData(
+ThemeData _iOSDefaultMaterialTheme = ThemeData(
     primaryColor: Color(0xFFF9F9F9),
     canvasColor: CupertinoColors.white,
     fontFamily: '.SF UI Text',
@@ -273,7 +310,5 @@ ThemeData _iOSTheme = ThemeData(
       bodyText2: _iOSDefaultTheme.textTheme.textStyle,
       headline6: _iOSDefaultTheme.textTheme.navTitleTextStyle,
     ));
-ThemeData platformThemeData =
-Platform.isAndroid ? _androidTheme : Platform.isIOS ? _iOSTheme : null;
 
-double appBarElevation = Platform.isAndroid ? 4.0 : 0.5;
+double platformAppBarElevation = Platform.isAndroid ? 4.0 : 0.5;
