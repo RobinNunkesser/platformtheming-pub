@@ -4,15 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
 
+import 'ios_material_theme.dart';
+
+double platformAppBarElevation = Platform.isAndroid ? 4.0 : 0.5;
+
 class PlatformTheme implements ThemeData {
 
   ThemeData _theme;
 
-  //PlatformTheme(this._theme);
-
-  PlatformTheme() {
+  PlatformTheme({ThemeData androidTheme, ThemeData iosTheme}) {
     _theme =
-    Platform.isAndroid ? ThemeData() : Platform.isIOS ? _iOSDefaultMaterialTheme : null;
+    Platform.isAndroid ? androidTheme ?? ThemeData() : Platform.isIOS ? iosTheme ?? iOSMaterialTheme : null;
   }
 
   @override
@@ -301,14 +303,3 @@ class PlatformTheme implements ThemeData {
 
 }
 
-CupertinoThemeData _iOSDefaultTheme = CupertinoThemeData();
-ThemeData _iOSDefaultMaterialTheme = ThemeData(
-    primaryColor: Color(0xFFF9F9F9),
-    canvasColor: CupertinoColors.white,
-    fontFamily: '.SF UI Text',
-    textTheme: TextTheme(
-      bodyText2: _iOSDefaultTheme.textTheme.textStyle,
-      headline6: _iOSDefaultTheme.textTheme.navTitleTextStyle,
-    ));
-
-double platformAppBarElevation = Platform.isAndroid ? 4.0 : 0.5;
