@@ -6,7 +6,7 @@ import 'ios_material_theme.dart';
 class PlatformTheme {
 
   ThemeData data;
-  double platformAppBarElevation = Platform.isAndroid ? 4.0 : 0.5;
+  static double appBarElevation = Platform.isAndroid ? 4.0 : 0.5;
 
   PlatformTheme({ThemeData androidTheme, ThemeData iosTheme}) {
     data =
