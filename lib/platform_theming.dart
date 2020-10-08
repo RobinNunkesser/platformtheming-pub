@@ -5,11 +5,10 @@ import 'ios_material_theme.dart';
 
 class PlatformThemeData {
 
-  static double appBarElevation = Platform.isAndroid ? 4.0 : 0.5;
   static ThemeData _lightAndroidTheme = ThemeData.light();
   static ThemeData _darkAndroidTheme = ThemeData.dark();
   static ThemeData _lightCupertinoTheme = iOSMaterialLightTheme;
-  static ThemeData _darkCupertinoTheme = iOSMaterialLightTheme;
+  static ThemeData _darkCupertinoTheme = iOSMaterialDarkTheme;
 
   static ThemeData light({ThemeData androidTheme, ThemeData iosTheme}) {
     if (androidTheme!=null) _lightAndroidTheme = androidTheme;
